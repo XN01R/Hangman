@@ -33,7 +33,6 @@ fn main() {
 
             if secret_word.contains(&guess) {
                 println!("{} is in the word!", guess);
-                continue; 
             }
 
             else if !secret_word.contains(&guess) {
