@@ -1,12 +1,12 @@
 use std::io;
 use rand::Rng;
-
+mod words;
 
 fn main() {
 
     let mut limbs = 4;
     let num_gen = rand::thread_rng().gen_range(0..3);
-    let secret_word = words()[num_gen];
+    let secret_word = words::stuff()[num_gen];
 
     println!("\n\t\t== !Hangman! ==\n");
     println!("Random word generated.");
@@ -68,13 +68,4 @@ fn main() {
             }
         }
     }
-}
-
-
-fn words() -> [&'static str; 4] {
-
-
-    ["hello", "bye", "morning", "midnight"]
-
-    
 }
